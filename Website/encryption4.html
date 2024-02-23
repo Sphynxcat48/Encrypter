@@ -39,6 +39,7 @@
       justify-content: center;
       flex-direction: row;
     }
+
     .nav-tabs {
       border: 2px solid white;
     }
@@ -62,16 +63,25 @@
     }
 
     .nav-pills>li>a:hover {
-      background-color: #fff;
+      background-color: #444;
       color: #fff;
       border: 2px solid transparent;
     }
-    .nav-pills > li > a { margin-left:10px;margin-right:10px; }
-  </style>
 
+    .nav-pills>li>a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="blackColor">
+    <div class="container">
+      <h3>CryptoSquare</h3>
+    </div>
+  </div>
+
   <br><br>
   <div class="container">
     <div class="jumbotron">
@@ -101,7 +111,8 @@
       <input type="text" id="Box" name="Box" placeholder="Insert encrypted text here">
       <p class="smallerToo">
         <a href="#">
-          <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle"></div>
+          <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle">
+          </div>
         </a>
     </div>
     <p>This is where the decrypted text goes</p>
