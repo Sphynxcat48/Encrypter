@@ -16,7 +16,7 @@
       transform: rotate(45deg);
       height: 30px;
       width: 30px;
-      background-color: #333;
+      background-color: red;
       border: 2px solid white;
       margin: 0px;
       padding: 3px 5px 3px 3px;
@@ -25,7 +25,7 @@
     .square:hover {
       height: 30px;
       width: 30px;
-      background-color: #fff;
+      background-color: white;
 
     }
 
@@ -39,19 +39,69 @@
       justify-content: center;
       flex-direction: row;
     }
+
+    .nav-tabs {
+      border: 2px solid red;
+    }
+
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus {
+      color: red;
+      background-color: white;
+      border: 2px solid white;
+    }
+
+    .nav-pills>li.active>a:hover {
+      background-color: white;
+      color: red;
+    }
+
+    .nav-pills>li>a,
+    .nav-pills>li>a:focus {
+      color: white;
+      background-color: red;
+      border: 2px solid white;
+    }
+
+    .nav-pills>li>a:hover {
+      background-color: pink;
+      color: white;
+      border: 2px solid transparent;
+    }
+
+    .nav-pills>li>a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    h1.grey {
+      color: white;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    /* make it so hovering over the link to main doesn't make the underline #333*/
   </style>
 </head>
 
 <body>
+  <div class="redColor">
+    <div class="container">
+      <h3>CryptoSquare</h3>
+    </div>
+  </div>
+
   <br><br>
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" id="redJumbotron">
       <a href="index.html">
-        <h1 class="grey">Coding Decoder</h1>
+        <h1 class="grey">Coding Encoder</h1>
       </a>
       <p class="smallerLess"></p>
 
-      <ul class="nav nav-pills nav-justified">
+      <ul class="nav nav-pills nav-justified navColor">
         <li li role="presentation">
           <a href="encryption1.html">Encryption Type 1</a>
         </li>
@@ -67,15 +117,18 @@
       </ul>
 
       <p class="smallerToo"></p>
-      <label for="Box">
-      </label>
-      <input type="text" id="Box" name="Box" placeholder="Insert encrypted text here">
+      <span class="notBody">
+        <label for="Box">
+        </label>
+        <input type="text" id="Box" name="Box" placeholder="Insert decrypted text here">
+      </span>
       <p class="smallerToo">
         <a href="#">
-          <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle"></div>
+          <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle">
+          </div>
         </a>
     </div>
-    <p>This is where the decrypted text goes</p>
+    <p>This is where the encrypted text goes</p>
   </div>
   <script>
     async function runProgram() {

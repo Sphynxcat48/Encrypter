@@ -6,8 +6,8 @@
 a,
 a:focus,
 a:hover {
-  background: #333;
-  color: #ffffff;
+  background: #fff;
+  color: #333;
   /* change this to 333 */
 }
 
@@ -30,11 +30,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #fff;
 }
 
 body {
-  color: #fff;
+  color: #333;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
@@ -152,17 +152,27 @@ body {
   }
 
   .jumbotron {
-    border: 2px solid#fff;
-    background-color: #333;
+    border: 2px solid red;
+    background-color: #fff;
+  }
+
+  #blueJumbotron {
+    border: 2px solid #fff;
+    background-color: blue;
+  }
+
+  #redJumbotron {
+    border: 2px solid #fff;
+    background-color: red;
   }
 
   .grey {
-    color: #333;
+    color: blue;
     /* change this to 333 */
   }
 
   .smaller {
-    height: 43.5px;
+    height: 0px;
   }
 
   .smallerLess {
@@ -180,31 +190,49 @@ body {
   .nav-item {
     margin: auto;
   }
-  .nav-tabs {
-      border: 2px solid white;
-    }
 
-    .nav-pills>li.active>a,
-    .nav-pills>li.active>a:focus {
-      color: #333;
-      background-color: #fff;
-    }
+  body {
+    font-family: monospace;
+  }
 
-    .nav-pills>li.active>a:hover {
-      background-color: #fff;
-      color: #333;
-    }
+  .notBody {
+    font-family: sans-serif;
+  }
 
-    .nav-pills>li>a,
-    .nav-pills>li>a:focus {
-      color: white;
-      background-color: #333;
-      border: 2px solid white;
-    }
+  #smallFont {
+    font-size: 10px;
+  }
 
-    .nav-pills>li>a:hover {
-      background-color: #fff;
-      color: #fff;
-      border: 2px solid transparent;
-    }
+  .smallerAlso {
+    height: 30px;
+  }
+
+  .smallerTook {
+    height: 40px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .blackColor {
+    background-color: black;
+    width: 100%;
+    color: #fff;
+  }
+
+  .blueColor {
+    background-color: blue;
+    width: 100%;
+    color: #fff;
+  }
+
+  .redColor {
+    background-color: red;
+    width: 100%;
+    color: #fff;
+  }
 }

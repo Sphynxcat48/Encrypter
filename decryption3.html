@@ -16,7 +16,7 @@
       transform: rotate(45deg);
       height: 30px;
       width: 30px;
-      background-color: red;
+      background-color: blue;
       border: 2px solid white;
       margin: 0px;
       padding: 3px 5px 3px 3px;
@@ -41,30 +41,30 @@
     }
 
     .nav-tabs {
-      border: 2px solid red;
+      border: 2px solid blue;
     }
 
     .nav-pills>li.active>a,
     .nav-pills>li.active>a:focus {
-      color: red;
+      color: blue;
       background-color: white;
       border: 2px solid white;
     }
 
     .nav-pills>li.active>a:hover {
       background-color: white;
-      color: red;
+      color: blue;
     }
 
     .nav-pills>li>a,
     .nav-pills>li>a:focus {
       color: white;
-      background-color: red;
+      background-color: blue;
       border: 2px solid white;
     }
 
     .nav-pills>li>a:hover {
-      background-color: pink;
+      background-color: lightblue;
       color: white;
       border: 2px solid transparent;
     }
@@ -87,7 +87,7 @@
 </head>
 
 <body>
-  <div class="redColor">
+  <div class="blueColor">
     <div class="container">
       <h3>CryptoSquare</h3>
     </div>
@@ -95,45 +95,41 @@
 
   <br><br>
   <div class="container">
-    <div class="jumbotron" id="redJumbotron">
+    <div class="jumbotron" id="blueJumbotron">
       <a href="index.html">
-        <h1 class="grey">Coding Encoder</h1>
+        <h1 class="grey">Coding Decoder</h1>
       </a>
-
       <p class="smallerLess"></p>
 
       <ul class="nav nav-pills nav-justified navColor">
+        <li li role="presentation">
+          <a href="decryption1.html">Decryption Type 1</a>
+        </li>
+        <li li role="presentation">
+          <a href="decryption2.html">Decryption Type 2</a>
+        </li>
         <li li role="presentation" class="active greyColor">
-          <a aria-current="page" href="encryption1.html">Encryption Type 1</a>
+          <a aria-current="page" href="decryption3.html">Decryption Type 3</a>
         </li>
         <li li role="presentation">
-          <a href="encryption2.html">Encryption Type 2</a>
-        </li>
-        <li li role="presentation">
-          <a href="encryption3.html">Encryption Type 3</a>
-        </li>
-        <li li role="presentation">
-          <a href="encryption4.html">Encryption Type 4</a>
+          <a href="decryption4.html">Decryption Type 4</a>
         </li>
       </ul>
-
 
       <p class="smallerToo"></p>
       <span class="notBody">
         <label for="Box">
         </label>
-        <input type="text" id="Box" name="Box" placeholder="Insert decrypted text here">
+        <input type="text" id="Box" name="Box" placeholder="Insert encrypted text here">
       </span>
       <p class="smallerToo">
         <a href="#">
           <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle">
-
           </div>
         </a>
     </div>
-    <p>This is where the encrypted text goes</p>
+    <p>This is where the decrypted text goes</p>
   </div>
-
   <script>
     async function runProgram() {
       // Load the WebAssembly module

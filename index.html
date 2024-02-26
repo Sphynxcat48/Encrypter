@@ -3,6 +3,7 @@
 
 <head>
   <title>Coding Depository Homepage</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -10,70 +11,108 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
+
   <title>Decrypter</title>
   <style>
-    .square {
+    .redSquare {
       transform: rotate(45deg);
       height: 30px;
       width: 30px;
-      background-color: #333;
-      border: 2px solid white;
+      background-color: #fff;
+      border: 2px solid red;
       margin: auto;
     }
 
-    .square:hover {
+    .redSquare:hover {
+      height: 30px;
+      width: 30px;
+      background-color: red;
+    }
+
+    .blueSquare {
+      transform: rotate(45deg);
       height: 30px;
       width: 30px;
       background-color: #fff;
+      border: 2px solid blue;
+      margin: auto;
     }
+
+    .blueSquare:hover {
+      height: 30px;
+      width: 30px;
+      background-color: blue;
+    }
+
     #smallFont {
       font-size: 10px;
     }
+
     .smallerAlso {
       height: 30px;
     }
+
     .smallerTook {
       height: 40px;
     }
-    .footer { 
-        position: absolute; 
-        bottom: 0; 
-        left: 0; 
-        z-index: 10;
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .blackColor {
+      background-color: #444;
+      width: 100%;
+      color: #eee;
     }
   </style>
 
 </head>
 
 <body>
+  <div class="blackColor">
+    <div class="container">
+      <h3>CryptoSquare</h3>
+    </div>
+  </div>
 
   <div class="container">
-    <h3>CryptoSquare</h3>
-    <hr>
-
     <div class="inner cover">
       <br>
       <br>
       <div class="smaller"></div>
       <h1 class="cover-heading">C++ Team</h1>
-      <div class="smallerAlso"></div>
-      <p class="lead">Welcome to our decryption website! </p>
-      <p class="lead">Click the diamond to continue to our decrypter</p>
-      <div class="smaller"></div>
+      <br>
+      <p class="lead">Welcome to our decryption website!
+        <br>
+        Click the red square to continue to our encrypter
+      </p>
       <a href="encryption1.html">
-        <div class=square></div>
+        <div class="redSquare"></div>
       </a>
+      <br>
+      <p class="lead">Click the blue square to continue to our decrypter</p>
+      <a href="decryption1.html">
+        <div class="blueSquare"></div>
+      </a>
+
+      </p>
+
+
     </div>
-    
 
+  </div>
+
+  <div class="footer blackColor" id="smallFont">
+    <br>
+    <p>Brought to you by - Martin, Peter, and Iris | Credit Bootstrap Cover Template</p>
   </div>
 
   </div>
 
-  <div class="footer" id="smallFont"><p>Brought to you by - Martin, Peter, and Iris | Credit Bootstrap Cover Template</div>
-
-  </div>
-  
 </body>
 
 </html>
