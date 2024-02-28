@@ -14,4 +14,4 @@
 
 ## UML
 
-![UML](uml/Untitled Diagram.drawio.png)
+![UML](https://github.com/Sphynxcat48/Encrypter/blob/a7f4899324914b2fb1d6c3aadf7502ebc2d5d66a/uml/Untitled%20Diagram.drawio.png)
