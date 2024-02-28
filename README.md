@@ -14,4 +14,4 @@
 
 ## UML
 
-![UML](https://github.com/Sphynxcat48/Encrypter/blob/main/uml/Screenshot%202024-02-21%20at%2010.18.50%20AM.png)
+![UML](https://github.com/Sphynxcat48/Encrypter/blob/main/uml/Untitled Diagram.drawio.png)
