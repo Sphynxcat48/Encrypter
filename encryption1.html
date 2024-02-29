@@ -137,7 +137,7 @@
   <script>
     async function runProgram() {
       // Load the WebAssembly module
-      const response = await fetch('program.wasm');
+      const response = await fetch('output.wasm');
       const buffer = await response.arrayBuffer();
       const module = await WebAssembly.compile(buffer);
       const instance = await WebAssembly.instantiate(module);
