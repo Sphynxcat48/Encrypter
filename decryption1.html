@@ -34,6 +34,11 @@
       color: white;
     }
 
+    .glyphicon:hover {
+      transform: rotate(45deg);
+      color: blue;
+    }
+
     .nav-tabs {
       display: flex;
       justify-content: center;
@@ -64,7 +69,7 @@
     }
 
     .nav-pills>li>a:hover {
-      background-color: lightblue;
+      background-color: #3366ff;
       color: white;
       border: 2px solid transparent;
     }
@@ -78,16 +83,25 @@
       color: white;
     }
 
-    h1 {
-      color: white;
+    /*
+    .textBoxSize {
+      height: 30px;
+      width: 50px;
+    }
+    */
+
+    .p-border {
+      border: 2px solid #333;
     }
 
-    /* make it so hovering over the link to main doesn't make the underline #333*/
+    .white {
+      visibility: hidden;
+    }
   </style>
 </head>
 
 <body>
-  <div class="blueColor">
+  <div class=" blueColor">
     <div class="container">
       <h3>CryptoSquare</h3>
     </div>
@@ -97,7 +111,7 @@
   <div class="container">
     <div class="jumbotron" id="blueJumbotron">
       <a href="index.html">
-        <h1 class="grey">Coding Decoder</h1>
+        <h1 class="grey">Coding Encoder</h1>
       </a>
 
       <p class="smallerLess"></p>
@@ -117,27 +131,35 @@
         </li>
       </ul>
 
-
       <p class="smallerToo"></p>
-      <span class="notBody">
-        <label for="Box">
-        </label>
-        <input type="text" id="Box" name="Box" placeholder="Insert encrypted text here">
-      </span>
-
-      <p class="smallerToo">
+      <div class="textBoxSize">
+        <span class="notBody">
+          <label for="Box">
+          </label>
+          <textarea id="userInput" rows="4" cols="50"></textarea>
+        </span>
+      </div>
+      <p class="smallerLess">
         <a href="#">
           <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle">
+            <div id="output"></div>
           </div>
         </a>
     </div>
-    <p>This is where the decrypted text goes</p>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <div class="p-border">
+        <br>This is where the encrypted text goes<br>
+        <div class="white">j</div>
+      </div>
+    </div>
+    <div class="col-xs-2"></div>
   </div>
-
+  </p>
   <script>
     async function runProgram() {
       // Load the WebAssembly module
-      const response = await fetch('program.wasm');
+      const response = await fetch('output1.wasm');
       const buffer = await response.arrayBuffer();
       const module = await WebAssembly.compile(buffer);
       const instance = await WebAssembly.instantiate(module);

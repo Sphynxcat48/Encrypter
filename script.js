@@ -1,30 +1,28 @@
 // Load the WebAssembly module
-const Module = {
-    onRuntimeInitialized: function() {
-        console.log("WASM module loaded");
-    }
-};
-
-fetch('output.wasm')
+fetch('output1.wasm')
     .then(response => response.arrayBuffer())
-    .then(bytes => WebAssembly.instantiate(bytes, Module))
-    .then(instance => {
-        // Set the input
-        const setInput = instance.exports.setInput;
-        const inputStr = "your_input_string_here";
-        const inputPtr = Module._malloc(inputStr.length + 1);
-        Module.stringToUTF8(inputStr, inputPtr, inputStr.length + 1);
-        setInput(inputPtr);
+    .then(bytes => WebAssembly.instantiate(bytes, {}))
+    .then(result => {
+        const instance = result.instance;
 
-        // Get the output
-        const getOutput = instance.exports.getOutput;
-        const outputPtr = getOutput();
-        const outputStr = Module.UTF8ToString(outputPtr);
+        // Function to run the program
+        window.runProgram = function() {
+            const userInput = document.getElementById('userInput').value;
+            const inputPtr = instance.exports.allocateUTF8(userInput);
 
-        // Use the output
-        console.log("Output:", outputStr);
+            // Set the input
+            instance.exports.setInput(inputPtr);
 
-        // Free memory
-        Module._free(inputPtr);
-        Module._free(outputPtr);
-    });
+            // Get the output
+            const outputPtr = instance.exports.getOutput();
+            const outputStr = instance.exports.UTF8ToString(outputPtr);
+
+            // Display the output
+            document.getElementById('output').textContent = outputStr;
+
+            // Free memory
+            instance.exports._free(inputPtr);
+            instance.exports._free(outputPtr);
+        };
+    })
+    .catch(err => console.error(err));
