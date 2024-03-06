@@ -1,0 +1,174 @@
+<!-- Iris William -->
+<!DOCTYPE html>
+<html class="homePage">
+
+<head>
+  <title>Coding Depository Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .square {
+      height: 30px;
+      width: 30px;
+      background-color: blue;
+      border: 2px solid white;
+      margin: 0 none;
+      padding: 6px 5px 3px 5px;
+    }
+
+    .square:hover {
+      height: 30px;
+      width: 30px;
+      background-color: white;
+
+    }
+
+    .glyphicon {
+      transform: rotate(45deg);
+      color: white;
+    }
+
+    .glyphicon:hover {
+      transform: rotate(45deg);
+      color: blue;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .nav-tabs {
+      border: 2px solid blue;
+    }
+
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus {
+      color: blue;
+      background-color: white;
+      border: 2px solid white;
+    }
+
+    .nav-pills>li.active>a:hover {
+      background-color: white;
+      color: blue;
+    }
+
+    .nav-pills>li>a,
+    .nav-pills>li>a:focus {
+      color: white;
+      background-color: blue;
+      border: 2px solid white;
+    }
+
+    .nav-pills>li>a:hover {
+      background-color: #3366ff;
+      color: white;
+      border: 2px solid transparent;
+    }
+
+    .nav-pills>li>a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    h1.grey {
+      color: white;
+    }
+
+    .p-border {
+      border: 2px solid #333;
+    }
+
+    .white {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=" blueColor">
+    <div class="container">
+      <h3>CryptoSquare</h3>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="container">
+    <div class="jumbotron" id="blueJumbotron">
+      <a href="index.html">
+        <h1 class="grey">Coding Encoder</h1>
+      </a>
+
+      <p class="smallerLess"></p>
+
+      <ul class="nav nav-pills nav-justified navColor">
+        <li li role="presentation">
+          <a href="decryption1.html">Decryption Type 1</a>
+        </li>
+        <li li role="presentation">
+          <a href="decryption2.html">Decryption Type 2</a>
+        </li>
+        <li li role="presentation">
+          <a href="decryption3.html">Decryption Type 3</a>
+        </li>
+        <li li role="presentation" class="active greyColor">
+          <a aria-current="page" href="decryption4.html">Decryption Type 4</a>
+        </li>
+      </ul>
+
+      <p class="smallerToo"></p>
+      <div class="textBoxSize">
+        <span class="notBody">
+          <label for="Box">
+          </label>
+          <textarea class="textArea" id="userInput" rows="8" cols="80"></textarea>
+        </span>
+      </div>
+      <p class="smallerLess">
+        <a href="#">
+          <div onclick="runProgram()" class="square glyphicon glyphicon-star">
+            <div id="output"></div>
+          </div>
+        </a>
+    </div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <div class="p-border">
+        <br>This is where the encrypted text goes<br>
+        <div class="white">j</div>
+      </div>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+  </p>
+  <br>
+  <script>
+    async function runProgram() {
+      //JS code by peter klehr
+      // Load the WebAssembly module
+      const response = await fetch('output4.wasm');
+      const buffer = await response.arrayBuffer();
+      const module = await WebAssembly.compile(buffer);
+      const instance = await WebAssembly.instantiate(module);
+
+
+      const input = document.getElementById('input').value;
+
+      // Call the exported function with input
+      const result = instance.exports.runProgram(input);
+
+      // Display the output
+      document.getElementById('output').textContent = result;
+    }
+  </script>
+</body>
+
+</html>
