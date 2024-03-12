@@ -1,0 +1,81 @@
+ /* Sets height width color border magin and padding of the diamond button with a star inside */
+ .square {
+   height: 30px;
+   width: 30px;
+   background-color: blue;
+   border: 2px solid white;
+   margin: 0 none;
+   padding: 6px 5px 3px 5px;
+ }
+
+ /* Sets height width and color of the diamond button with a star inside when hovered upon */
+ .square:hover {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+
+ }
+
+ /* Rotates the glyphicon to simultaneously rotate the square button and makes the star white */
+ .glyphicon {
+   transform: rotate(45deg);
+   color: white;
+ }
+
+ /* Rotates the glyphicon to simultaneously rotate the square button and makes the star blue when you hover over it */
+ .glyphicon:hover {
+   transform: rotate(45deg);
+   color: blue;
+ }
+
+ /* Makes the nav-pills center and horizontally span over 100% of the jumbotron */
+ .nav-tabs {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+ }
+
+ /* Gives the active nav-tab "blue" text and have a white background and a solid white 2 pixel border */
+ .nav-pills>li.active>a,
+ .nav-pills>li.active>a:focus {
+   color: blue;
+   background-color: white;
+   border: 2px solid white;
+ }
+
+ /* Maintains the blue text and white background color of the active nav-tab when hovered over */
+ .nav-pills>li.active>a:hover {
+   background-color: white;
+   color: blue;
+ }
+
+ /* Gives the nav-tabs "white" text and have a blue background and a solid white 2 pixel border */
+ .nav-pills>li>a,
+ .nav-pills>li>a:focus {
+   color: white;
+   background-color: blue;
+   border: 2px solid white;
+ }
+
+ /* Gives the nav-tabs a 2 pixel transparent border with white text and a light blue background color (#3366ff) when hovered over */
+ .nav-pills>li>a:hover {
+   background-color: #3366ff;
+   color: white;
+   border: 2px solid transparent;
+ }
+
+ /* Gives a 10 pixel margin between the nav-tabs */
+ .nav-pills>li>a {
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ /* Makes the text "Coding Encoder" white and have a white underline when you hover over it */
+ h1.grey {
+   color: white;
+ }
+
+ /* Adds a grey border (#333) around the output box */
+ .p-border {
+   border: 2px solid #333;
+ }
