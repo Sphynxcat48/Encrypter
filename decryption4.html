@@ -1,121 +1,52 @@
+<!-- Iris William -->
 <!DOCTYPE html>
 <html class="homePage">
 
 <head>
-  <title>Coding Depository Homepage</title>
+  <title>Decrypter</title><!-- name of page when tab is hovered over -->
+
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link to bootstrap stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Link to jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Link to latest compiled JavaScript (3.4.1) -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"><!-- stylesheet for all pages -->
+  <link rel="stylesheet" href="styleBlue.css">
+  <!-- stylesheet for all pages -->
+  <script src="script.js"></script><!-- personal javascript -->
 
-  <style>
-    .square {
-      transform: rotate(45deg);
-      height: 30px;
-      width: 30px;
-      background-color: blue;
-      border: 2px solid white;
-      margin: 0px;
-      padding: 3px 5px 3px 3px;
-    }
-
-    .square:hover {
-      height: 30px;
-      width: 30px;
-      background-color: white;
-
-    }
-
-    .glyphicon {
-      transform: rotate(45deg);
-      color: white;
-    }
-
-    .glyphicon:hover {
-      transform: rotate(45deg);
-      color: blue;
-    }
-
-    .nav-tabs {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-    }
-
-    .nav-tabs {
-      border: 2px solid blue;
-    }
-
-    .nav-pills>li.active>a,
-    .nav-pills>li.active>a:focus {
-      color: blue;
-      background-color: white;
-      border: 2px solid white;
-    }
-
-    .nav-pills>li.active>a:hover {
-      background-color: white;
-      color: blue;
-    }
-
-    .nav-pills>li>a,
-    .nav-pills>li>a:focus {
-      color: white;
-      background-color: blue;
-      border: 2px solid white;
-    }
-
-    .nav-pills>li>a:hover {
-      background-color: #3366ff;
-      color: white;
-      border: 2px solid transparent;
-    }
-
-    .nav-pills>li>a {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    h1.grey {
-      color: white;
-    }
-
-    /*
-    .textBoxSize {
-      height: 30px;
-      width: 50px;
-    }
-    */
-
-    .p-border {
-      border: 2px solid #333;
-    }
-
-    .white {
-      visibility: hidden;
-    }
-  </style>
 </head>
+<!-- Important dont remove -->
+<script src="otuput4.js"></script>
 
 <body>
   <div class=" blueColor">
-    <div class="container">
+    <!-- makes the background of the header blue, the width of the header span across the whole page and the header text white -->
+    <div class="container"><!-- makes website resizable -->
       <h3>CryptoSquare</h3>
     </div>
   </div>
 
   <br><br>
-  <div class="container">
-    <div class="jumbotron" id="blueJumbotron">
+  <div class="container"><!-- makes website resizable -->
+
+    <!-- start of jumbotron -->
+    <div class="jumbotron" id="blueJumbotron"><!-- makes jumbotron blue -->
       <a href="index.html">
         <h1 class="grey">Coding Encoder</h1>
       </a>
 
-      <p class="smallerLess"></p>
+      <p class="smallerLess"></p><!-- line break 10 pixels high -->
 
+      <!-- start of nav-pills -->
       <ul class="nav nav-pills nav-justified navColor">
         <li li role="presentation">
           <a href="decryption1.html">Decryption Type 1</a>
@@ -130,34 +61,45 @@
           <a aria-current="page" href="decryption4.html">Decryption Type 4</a>
         </li>
       </ul>
+      <!-- end of nav-pills -->
 
-      <p class="smallerToo"></p>
+      <!-- start of text box -->
+      <p class="smallerToo"></p><!-- line break 20 pixels high -->
       <div class="textBoxSize">
         <span class="notBody">
-          <label for="Box">
-          </label>
-          <textarea id="userInput" rows="4" cols="50"></textarea>
+
+          <textarea class="textArea" id="userInput" placeholder="Enter text..." rows="8" cols="80"></textarea>
         </span>
       </div>
-      <p class="smallerLess">
-        <a href="#">
-          <div onclick="runProgram()" class="square glyphicon glyphicon-ok-circle">
-            <div id="output"></div>
+      <!-- end of text box -->
+
+      <p class="smallerLess"><!-- line break 10 pixels high -->
+        <a href="#"> <!-- adds a placeholder link to the diamond button with the square inside -->
+          <!-- start of diamond button with star glyphicon -->
+          <div onclick="runCode()" class="square glyphicon glyphicon-star">
+            <!-- adds glyphicon star to the diamond button -->
           </div>
         </a>
+        <!-- end of diamond button with star glyphicon -->
     </div>
+    <!-- end of jumbotron -->
+
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
+      <!-- output box start -->
       <div class="p-border">
-        <br>This is where the encrypted text goes<br>
-        <div class="white">j</div>
+        <br>
+        <div id="output">This is where the encrypted text goes</div><br>
       </div>
+      <!-- output box end -->
     </div>
     <div class="col-xs-2"></div>
   </div>
   </p>
+  <br>
   <script>
     async function runProgram() {
+      //JS code by peter klehr
       // Load the WebAssembly module
       const response = await fetch('output4.wasm');
       const buffer = await response.arrayBuffer();
