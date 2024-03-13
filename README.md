@@ -16,6 +16,10 @@
 
 # https:https://sphynxcat48.github.io/Encrypter/
 
+### link to just website no java or c++
+
+### https://e619b8f0-ad12-41a4-8925-15369e008833-00-3ea5u4sz012om.janeway.replit.dev/
+
 ## UML
 
 ![UML](https://github.com/Sphynxcat48/Encrypter/blob/a7f4899324914b2fb1d6c3aadf7502ebc2d5d66a/uml/Untitled%20Diagram.drawio.png)
