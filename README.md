@@ -28,12 +28,18 @@
 
 ### Homepage
 
-<img width="1324" alt="Homepage" style='border:1px solid #000000' src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/c688615c-d795-429f-a99f-c5a73430f711">
+<kbd>
+<img width="1324" alt="Homepage" src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/c688615c-d795-429f-a99f-c5a73430f711">
+</kbd>
 
 ### Red Page Design
 
-<img width="1323" alt="Red Page Design" style='border:1px solid #000000' src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/c015893c-d0e2-46ee-8788-e40722e35a35">
+<kbd>
+<img width="1323" alt="Red Page Design" src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/c015893c-d0e2-46ee-8788-e40722e35a35">
+</kbd>
 
 ### Blue Page Design
 
-<img width="1323" alt="Red Page Design" style='border:1px solid #000000' src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/d939a3bb-d33c-4d7c-b456-98e41623b96a">
+<kbd>
+<img width="1323" alt="Red Page Design" src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/d939a3bb-d33c-4d7c-b456-98e41623b96a">
+</kbd>
