@@ -1,0 +1,241 @@
+/* Boostrap Cover Template CSS edited by Iris William */
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  background: #fff;
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  /* oooh what's this? Is this what's messing whith the text color?*/
+  background-color: #0ff000;
+  border: 1px solid #fff000;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+body {
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 600px;
+  background-color: #333;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav>li {
+  display: inline-block;
+}
+
+.masthead-nav>li+li {
+  margin-left: 20px;
+}
+
+.masthead-nav>li>a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .75);
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-nav>li>a:hover,
+.masthead-nav>li>a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.masthead-nav>.active>a,
+.masthead-nav>.active>a:hover,
+.masthead-nav>.active>a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+
+  /* end of Cover template CSS */
+
+  /* gives jumbotron a solid white 2 pixel border with a blue background color */
+  #blueJumbotron {
+    border: 2px solid #fff;
+    background-color: blue;
+  }
+
+  /* gives jumbotron a solid white 2 pixel border with a red background color */
+  #redJumbotron {
+    border: 2px solid #fff;
+    background-color: red;
+  }
+
+  /* 10 pixel line break */
+  .smallerLess {
+    height: 10px;
+  }
+
+  /* 20 pixel line break */
+  .smallerToo {
+    height: 20px;
+  }
+
+  /* 10 pixel line break */
+  .smallerHelp {
+    height: 10px;
+  }
+
+  /*  */
+  .nav-item {
+    margin: auto;
+  }
+
+  /* Gives all text in the website's body (basically all) the font "monospace" */
+  body {
+    font-family: monospace;
+  }
+
+  /* Gives text assigned to the class not body the font "sans-serif" */
+  .notBody {
+    font-family: sans-serif;
+  }
+
+  /* Gives the footer smaller text font of 10 pixels */
+  #smallFont {
+    font-size: 10px;
+  }
+
+  /* 30 pixel line break */
+  .smallerAlso {
+    height: 30px;
+  }
+
+  /* 40 pixel line break */
+  .smallerTook {
+    height: 40px;
+  }
+
+  /* Makes footer stay at the positon it's set at on the screen despite scrolling (bottom of the page), horizontal position is at left 0 (the very left of the page), vertical position is at bottom 0 (the bottom of the page), z-index 0 means it can be overlapped by anything else */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  /* makes the header have a blue background color and white text, and span over 100% of the page's width */
+  .blueColor {
+    background-color: blue;
+    width: 100%;
+    color: #fff;
+  }
+
+  /* makes the header have a red background color and white text, and span over 100% of the page's width */
+  .redColor {
+    background-color: red;
+    width: 100%;
+    color: #fff;
+  }
+
+  /* width is set to max, height is set to max, removes border and outline, adds 8 pixel padding all over */
+  .textArea {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    outline: 0 none;
+    padding: 8px 8px 8px 8px;
+    resize: vertical;
+    /* makes it so you can only make the height of the textbox bigger */
+  }
+}
