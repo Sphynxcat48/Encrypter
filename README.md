@@ -22,4 +22,4 @@
 
 ## HTML & CSS Organizer
 
-![UML] (<img width="951" alt="Screenshot 2024-03-20 at 10 43 48 AM" src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/7bc22f08-911d-44fe-9462-a5080d24cb56">)
+<img width="951" alt="Screenshot 2024-03-20 at 10 43 48 AM" src="https://github.com/Sphynxcat48/Encrypter/assets/158312194/7bc22f08-911d-44fe-9462-a5080d24cb56">
