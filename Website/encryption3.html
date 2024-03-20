@@ -1,0 +1,122 @@
+<!-- Iris William -->
+<!DOCTYPE html>
+<html class="homePage">
+
+<head>
+  <title>Encrypter</title><!-- name of page when tab is hovered over -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link to bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Link to jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Link to latest compiled JavaScript (3.4.1) -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css"><!-- stylesheet for all pages -->
+  <link rel="stylesheet" href="styleRed.css">
+  <!-- stylesheet for all pages -->
+  <script src="script.js"></script><!-- personal javascript -->
+
+</head>
+<!-- Important dont remove -->
+<script src="otuput7.js"></script>
+
+<body>
+  <div class=" redColor">
+    <!-- makes the background of the header red, the width of the header span across the whole page and the header text white -->
+    <div class="container"><!-- makes website resizable -->
+      <h3>CryptoSquare</h3>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="container"><!-- makes website resizable -->
+
+    <!-- start of jumbotron -->
+    <div class="jumbotron" id="redJumbotron"><!-- makes jumbotron blue -->
+      <a href="index.html">
+        <h1 class="grey">Coding Encoder</h1>
+      </a>
+
+      <p class="smallerLess"></p><!-- line break 10 pixels high -->
+
+      <!-- start of nav-pills -->
+      <ul class="nav nav-pills nav-justified navColor">
+        <li li role="presentation">
+          <a href="encryption1.html">Encryption Type 1</a>
+        </li>
+        <li li role="presentation">
+          <a href="encryption2.html">Encryption Type 2</a>
+        </li>
+        <li li role="presentation" class="active greyColor">
+          <a aria-current="page" href="encryption3.html">Encryption Type 3</a>
+        </li>
+        <li li role="presentation">
+          <a href="encryption4.html">Encryption Type 4</a>
+        </li>
+      </ul>
+      <!-- end of nav-pills -->
+
+      <!-- start of text box -->
+      <p class="smallerToo"></p><!-- line break 20 pixels high -->
+      <div class="textBoxSize">
+        <span class="notBody">
+
+          <!-- makes text box with place holder "Enter text..." with a height 80 pixels and a width 8 pixels (changes to width only occur on a smaller page layout) -->
+          <textarea class="textArea" id="userInput" placeholder="Enter text..." rows="8" cols="80"></textarea>
+        </span>
+      </div>
+      <!-- end of text box -->
+
+      <p class="smallerLess"><!-- line break 10 pixels high -->
+        <a href="#"> <!-- adds a placeholder link to the diamond button with the square inside -->
+          <!-- start of diamond button with star glyphicon -->
+          <div onclick="runCode()" class="square glyphicon glyphicon-star">
+            <!-- adds glyphicon star to the diamond button -->
+          </div>
+        </a>
+        <!-- end of diamond button with star glyphicon -->
+    </div>
+    <!-- end of jumbotron -->
+
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <!-- output box start -->
+      <div class="p-border">
+        <br>
+        <div id="output">This is where the encrypted text goes</div><br>
+      </div>
+      <!-- output box end -->
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+  </p>
+  <br>
+  <script>
+    async function runProgram() {
+      //JS code by peter klehr
+      // Load the WebAssembly module
+      const response = await fetch('output7.wasm');
+      const buffer = await response.arrayBuffer();
+      const module = await WebAssembly.compile(buffer);
+      const instance = await WebAssembly.instantiate(module);
+
+
+      const input = document.getElementById('input').value;
+
+      // Call the exported function with input
+      const result = instance.exports.runProgram(input);
+
+      // Display the output
+      document.getElementById('output').textContent = result;
+    }
+  </script>
+</body>
+
+</html>
